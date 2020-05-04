@@ -5,12 +5,12 @@
 |
 |----addlib
        |------CMakeLists.txt
-       |------addlib.h
-       |------addlib.cpp
+       |------addfunc.h
+       |------addfunc.cpp
 |----subdll
        |------CMakeLists.txt
-       |------subdll.h
-       |------subdll.cpp
+       |------subfunc.h
+       |------subfunc.cpp
  |----main
        |------CMakeLists.txt
        |------main.cpp
