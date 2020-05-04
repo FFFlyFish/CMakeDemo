@@ -1,0 +1,1 @@
+bool func1(int a, int b, int type, int& result);

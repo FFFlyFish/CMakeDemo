@@ -1,0 +1,15 @@
+#addlib/CMakeLists.txt
+
+#将当前目录下的所有源文件保存到变量ADDLIB_DIR_SRCS中
+aux_source_directory(. ADDLIB_DIR_SRCS)
+
+#生成静态库
+add_library(addlib STATIC
+ ${ADDLIB_DIR_SRCS}
+ addfunc.h
+)
+
+# 也可以使用下面的方式，但如果文件较多，上面的方式更好
+#add_library(addlib STATIC
+#addlib.cpp
+#)

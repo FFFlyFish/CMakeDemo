@@ -1,0 +1,21 @@
+  # cmake 的最低版本要求
+cmake_minimum_required(VERSION 2.8)
+
+#指定项目的名称，一般和项目的文件夹名称对应
+project(CMakeDemo)
+
+#设置静态库的输出目录
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME}/lib) 
+
+#设置动态库的输出目录
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME}/dll)
+
+#设置可执行文件的输出目录
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME})
+
+#添加子目录，子目录中的CMakeLists.txt将会被处理
+add_subdirectory(addlib)
+add_subdirectory(subdll)
+
+#添加子目录，子目录中的CMakeLists.txt将会被处理
+add_subdirectory(main)

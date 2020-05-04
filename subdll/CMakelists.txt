@@ -1,0 +1,7 @@
+#subdll/CMakeLists.txt
+
+#Éú³É¶¯Ì¬¿â
+add_library(subdll SHARED
+   subfunc.cpp
+   subfunc.h
+)

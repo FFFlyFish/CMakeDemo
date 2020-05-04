@@ -1,0 +1,24 @@
+#CMakeLists.txt
+
+#头文件目录
+include_directories(.)
+include_directories(..)
+include_directories(func)
+#include_directories(../addlib)
+#include_directories(../subdll)
+
+aux_source_directory(.  EXE_DIR_SRCS)
+aux_source_directory(func  EXE_DIR_SRCS)
+message(${EXE_DIR_SRCS})
+#添加要编译的可执行文件 前面是生成可执行文件的名称，后面是编译此可执行文件所需要的源文件
+#add_executable(${PROJECT_NAME}
+#main.cpp
+#func/func.cpp
+#)
+add_executable(${PROJECT_NAME} 
+               ${EXE_DIR_SRCS}
+               func/func.h)
+
+#添加可执行文件所需要的库，比如我们用到了libm.so（命名规则：lib+name+.so），就添加该库的名称
+target_link_libraries(${PROJECT_NAME} addlib)
+target_link_libraries(${PROJECT_NAME} subdll)
