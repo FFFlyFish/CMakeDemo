@@ -9,7 +9,7 @@ add_library(addlib STATIC
  addfunc.h
 )
 
-# 也可以使用下面的方式，但如果文件较多，上面的方式更好
+#也可以使用下面的方式，但如果文件较多，上面的方式更好
 #add_library(addlib STATIC
 #addlib.cpp
 #)
